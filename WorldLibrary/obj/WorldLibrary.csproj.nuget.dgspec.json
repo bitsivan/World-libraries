@@ -4,14 +4,14 @@
     "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj": {}
   },
   "projects": {
-    "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj": {
+    "C:\\FullStack\\WorldLibrary\\Library.Data\\Library.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj",
-        "projectName": "WorldLibrary",
-        "projectPath": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj",
+        "projectUniqueName": "C:\\FullStack\\WorldLibrary\\Library.Data\\Library.Data.csproj",
+        "projectName": "Library.Data",
+        "projectPath": "C:\\FullStack\\WorldLibrary\\Library.Data\\Library.Data.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\obj\\",
+        "outputPath": "C:\\FullStack\\WorldLibrary\\Library.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,146 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "microsoft.entityframeworkcore.sqlserver": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "microsoft.entityframeworkcore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\FullStack\\WorldLibrary\\Library.Services\\Library.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\FullStack\\WorldLibrary\\Library.Services\\Library.Services.csproj",
+        "projectName": "Library.Services",
+        "projectPath": "C:\\FullStack\\WorldLibrary\\Library.Services\\Library.Services.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\FullStack\\WorldLibrary\\Library.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\FullStack\\WorldLibrary\\Library.Data\\Library.Data.csproj": {
+                "projectPath": "C:\\FullStack\\WorldLibrary\\Library.Data\\Library.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj",
+        "projectName": "WorldLibrary",
+        "projectPath": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\WorldLibrary.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\FullStack\\WorldLibrary\\WorldLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\FullStack\\WorldLibrary\\Library.Services\\Library.Services.csproj": {
+                "projectPath": "C:\\FullStack\\WorldLibrary\\Library.Services\\Library.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "microsoft.entityframeworkcore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
