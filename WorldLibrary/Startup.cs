@@ -1,4 +1,7 @@
 using Library.Data;
+using Library.Data.Models;
+using Library.Data.Repository;
+using Library.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,8 +40,14 @@ namespace WorldLibrary
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library DEV Sergio Ivan Montejo Olán", Version = "v1" });
             }
             );
-            
 
+            //Context
+            services.AddTransient<LibraryDbContext>();
+            //services
+            services.AddTransient<BookService>();
+
+            //repositories
+            services.AddTransient<IRepository<Book>, BookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

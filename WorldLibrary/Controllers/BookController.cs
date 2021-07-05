@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Library.Data.Models;
+using Library.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,22 @@ namespace WorldLibrary.Controllers
     [Route("[controller]")]
     public class BookController : Controller
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly BookService _service;
+        public BookController(BookService service)
         {
-            return Ok("Test");
+            _service = service;
         }
+        [HttpGet]
+        public IEnumerable<Book> All()
+        {
+            return _service.All();
+        }
+
+        [HttpPost]
+        public Book Add([FromBody]Book book)
+        {
+            return _service.AddBook(book);
+        }
+
     }
 }
