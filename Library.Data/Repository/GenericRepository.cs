@@ -14,29 +14,30 @@ namespace Library.Data.Repository
         {
             _context = context;
         }
-        public T Add(T entity)
+        public virtual T Add(T entity)
         {
             return _context.Add(entity)
                     .Entity;
+
         }
 
-        public IEnumerable<T> All()
+        public virtual IEnumerable<T> All()
         {
             return _context.Set<T>().ToList();
         }
 
-        public T Delete(T entity)
+        public virtual T Delete(T entity)
         {
             return _context.Remove(entity)
                 .Entity;
         }
 
-        public void SaveChages()
+        public virtual void SaveChages()
         {
             _context.SaveChanges();
         }
 
-        public T Update(T entity)
+        public virtual T Update(T entity)
         {
             return _context.Update(entity)
                 .Entity;

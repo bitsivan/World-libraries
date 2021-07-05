@@ -34,13 +34,6 @@ namespace WorldLibrary
             services.AddDbContext<LibraryDbContext>(option => option.UseSqlServer(connection));
             services.AddControllers();
             //services.AddRazorPages();
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library DEV Sergio Ivan Montejo Olán", Version = "v1" });
-            }
-            );
-
             //Context
             services.AddTransient<LibraryDbContext>();
             //services
@@ -48,6 +41,15 @@ namespace WorldLibrary
 
             //repositories
             services.AddTransient<IRepository<Book>, BookRepository>();
+            services.AddTransient<IRepository<Author>, AuthorRepository>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library DEV Sergio Ivan Montejo Olán", Version = "v1" });
+            }
+            );
+
+       
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

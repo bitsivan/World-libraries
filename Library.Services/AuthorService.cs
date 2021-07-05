@@ -2,26 +2,26 @@
 using Library.Data.Repository;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Library.Services
 {
-    public class BookService
+    public class AuthorService
     {
+        private IRepository<Author> _repository;
 
-        private IRepository<Book> _repository;
-
-        public BookService(IRepository<Book> repository)
+        public AuthorService(IRepository<Author> repository)
         {
             _repository = repository;
         }
-        public IEnumerable<Book> All()
+        public IEnumerable<Author> All()
         {
             return _repository.All();
         }
 
-        public Book AddBook(Book book)
+        public Author AddBook(Author author)
         {
-            return _repository.Add(book);
+            return _repository.Add(author);
         }
     }
 }
