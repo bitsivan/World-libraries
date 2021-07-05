@@ -29,5 +29,16 @@ namespace WorldLibrary.Controllers
             return _service.AddBook(book);
         }
 
+        [HttpPut]
+        public Book Update([FromBody] Book book)
+        {
+            return _service.Update(book);
+        }
+
+        [HttpDelete ("/{id}")]
+        public Book Delete(int id)
+        {
+            return _service.Delete_Book(id);
+        }
     }
 }

@@ -37,12 +37,10 @@ namespace Library.Data.Repository
             base.SaveChages();
             return _book;
         }
-
-        public override Book Delete(Book entity)
+        public override Book Delete(Book book)
         {
-            var _book = _context.Books.Single(p => p.Id == entity.Id);
-
-            base.Delete(entity);
+            var _book = _context.Books.Single(p => p.Id == book.Id);
+            base.Delete(_book);
             base.SaveChages();
             return _book;
         }

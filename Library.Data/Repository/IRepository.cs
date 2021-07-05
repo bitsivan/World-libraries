@@ -9,7 +9,7 @@ namespace Library.Data.Repository
         T Add(T entity);
         T Update(T entity);
         IEnumerable<T> All();
-        T Delete(T entity);
+        T  Delete(T entity);
         void SaveChages();
     }
 }

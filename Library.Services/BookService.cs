@@ -23,5 +23,15 @@ namespace Library.Services
         {
             return _repository.Add(book);
         }
+
+        public Book Update(Book book)
+        {
+            return _repository.Update(book);
+        }
+
+        public Book Delete_Book(int id)
+        {
+            return _repository.Delete(new Book { Id=id});
+        }
     }
 }
